@@ -4,58 +4,40 @@
   <meta charset="UTF-8">
   <title>Just Julie</title>
   <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-    }
-    .ribbon {
-      background-color: #333;
-      color: white;
-      padding: 0.5em 1em;
-      font-size: 14px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav {
-      background: #f4f4f4;
-      padding: 1em;
-      display: flex;
-      gap: 1em;
-      justify-content: center;
-    }
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-    .section-label {
-      font-size: 1.2em;
-      margin-top: 2em;
-      text-align: center;
-    }
+    /* Your styles here */
   </style>
 </head>
 <body>
 
+  <!-- Sticky Ribbon -->
   <div class="ribbon">TEXTHERE</div>
 
-  <!-- Section Tabs -->
-  <nav>
-    <a href="professional/home/">Professional Home</a>
-    <a href="professional/about/">Professional About</a>
-    <a href="professional/photography/">Professional Photography</a>
-    <a href="professional/portfolio/">Professional Portfolio</a>
-    <a href="creative/home/">Creative Home</a>
-    <a href="creative/about/">Creative About</a>
-    <a href="creative/photography/">Creative Photography</a>
-    <a href="creative/portfolio/">Creative Portfolio</a>
-  </nav>
+  <!-- Placeholder for the Navbar -->
+  <div id="navbar-container"></div>
 
+  <!-- Content below -->
   <div class="section-label">
     <h1>Welcome to Just Julie</h1>
     <p>This is the main landing page. Please choose a section above.</p>
   </div>
+
+  <script>
+    // Function to load navbar dynamically
+    function loadNavbar() {
+      const navbarContainer = document.getElementById('navbar-container');
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          navbarContainer.innerHTML = data;
+        })
+        .catch(err => {
+          console.log('Error loading navbar:', err);
+        });
+    }
+
+    // Load navbar when the page loads
+    window.onload = loadNavbar;
+  </script>
 
 </body>
 </html>
