@@ -1,45 +1,42 @@
-/* Basic styles for your site */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-}
-
-header {
+  }
+  
+  .top-bar {
     background-color: #333;
-    color: white;
-    padding: 1rem 0;
-}
-
-h1 {
-    margin: 0;
-}
-
-.cat-image {
-    width: 200px;
-    height: auto;
-    margin-top: 20px;
-}
-
-.buttons {
-    margin-top: 20px;
-}
-
-.btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 32px;
+    padding: 10px;
     text-align: center;
+  }
+  
+  .top-bar a {
+    color: white;
+    margin: 0 20px;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    background-color: #45a049;
-}
+    font-weight: bold;
+  }
+  
+  .top-bar a:hover {
+    text-decoration: underline;
+  }
+  
+  .sub-navbar {
+    background-color: #eee;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .sub-navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .sub-navbar a:hover {
+    font-weight: bold;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
