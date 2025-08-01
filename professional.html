@@ -1,59 +1,115 @@
-
+<!-- Declares the document type and language -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Sets character encoding for the document -->
   <meta charset="UTF-8" />
+
+  <!-- Ensures proper scaling on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Title that appears in the browser tab -->
   <title>Professional Portfolio</title>
+
+  <!-- Link to external CSS stylesheet -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- JavaScript for scroll-based animations -->
+  <script src="scripts/creative.js" defer></script>
+
+  <!-- JavaScript for the image carousel in the Portfolio section -->
+  <script src="scripts/carousel.js" defer></script>
 </head>
+
+<!-- Body with light mode styling -->
 <body class="light-mode">
-  <header>
+
+  <!-- Fixed main header with top navigation -->
+  <header class="main-header">
+    <!-- Website title -->
     <h1>My Portfolio</h1>
+
+    <!-- Navigation bar -->
     <nav>
-      <ul>
+      <!-- Main navigation: switches between Professional and Creative modes -->
+      <ul class="main-nav">
         <li><a href="professional.html" class="active">Professional</a></li>
         <li><a href="creative.html">Creative</a></li>
       </ul>
+
+      <!-- Sub-navigation: scrolls to different sections on the same page -->
+      <ul class="sub-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+      </ul>
     </nav>
-    <div class="sub-nav">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#portfolio">Portfolio</a>
-    </div>
   </header>
 
+  <!-- Floating sidebar with icons that link to sections -->
+  <aside class="sidebar">
+    <a href="#home">🏠</a>
+    <a href="#about">👤</a>
+    <a href="#experience">💼</a>
+    <a href="#portfolio">🖼️</a>
+  </aside>
+
+  <!-- Main content area of the page -->
   <main>
-    <section id="home">
+    <!-- Each section has a unique ID for scrolling and a class for styling and animation -->
+
+    <!-- Home section -->
+    <section id="home" class="section animated bg1">
       <h2>Home</h2>
       <p>Welcome to the professional section of my portfolio.</p>
     </section>
 
-    <section id="about">
+    <!-- About section -->
+    <section id="about" class="section animated bg2">
       <h2>About</h2>
       <p>This is where you describe who you are, your background, and values.</p>
     </section>
 
-    <section id="experience">
+    <!-- Experience section -->
+    <section id="experience" class="section animated bg3">
       <h2>Experience</h2>
       <p>Details of your work, education, or related experience.</p>
     </section>
 
-    <section id="portfolio">
+    <!-- Portfolio section with image carousel -->
+    <section id="portfolio" class="section animated bg4">
       <h2>Portfolio</h2>
-      <div class="project">
-        <img src="images/project1.jpg" alt="Project 1" />
-        <h3>Project A</h3>
-        <p>Description of your project here.</p>
-      </div>
-      <div class="project">
-        <img src="images/project2.jpg" alt="Project 2" />
-        <h3>Project B</h3>
-        <p>Description of another project here.</p>
+
+      <!-- Carousel container -->
+      <div class="carousel">
+        <!-- Left arrow button -->
+        <button class="carousel-btn left">&#8592;</button>
+
+        <!-- Track holding the carousel items (images) -->
+        <div class="carousel-track">
+          <!-- Each carousel item contains an image and label -->
+          <div class="carousel-item">
+            <img src="images/project1.jpeg" alt="Project 1"/>
+            <p>Project A</p>
+          </div>
+          <div class="carousel-item">
+            <img src="images/project2.jpg" alt="Project 2"/>
+            <p>Project B</p>
+          </div>
+          <div class="carousel-item">
+            <img src="images/project1.jpg" alt="Project 3"/>
+            <p>Project C</p>
+          </div>
+        </div>
+
+        <!-- Right arrow button -->
+        <button class="carousel-btn right">&#8594;</button>
       </div>
     </section>
   </main>
 
+  <!-- Footer with copyright -->
   <footer>
     <p>&copy; 2025 Your Name</p>
   </footer>
